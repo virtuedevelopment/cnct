@@ -1,0 +1,32 @@
+/* .header * {
+  border: dashed 1px red;
+} */
+.header {
+  width: 100%;
+  min-height: 60svh;
+  /* border: dashed 1px red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.header h1 {
+  font-size: 12rem;
+  text-align: center;
+  letter-spacing: -4px;
+  font-weight: 300;
+  color: var(--color-secondary);
+  display: flex;
+  animation: var(--slideup-text);
+  animation-delay: 1.75s;
+  opacity: 0;
+}
+.header h1 span {
+  font-size: 5rem;
+}
+.header img {
+  position: absolute;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}

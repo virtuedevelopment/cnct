@@ -1,42 +1,136 @@
+/* CSS Root Variables Template */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Shade Variables */
+  --white: #f5f5f5;
+  --black: #293041;
+  --grey: #8f857a;
+
+  /* Color Variables */
+  --color-main: #ffebcd;
+  --color-secondary: #ffd699;
+  --color-tertiary: #8f857a;
+  --color-accent: #70675f;
+  --color-neutral: ;
+
+  /* Border Radii */
+  --border-rad-large: 5px;
+  --border-rad-medium: 15px;
+  --border-rad-small: 25px;
+
+  /* Padding */
+  --padding-main:3rem;
+  --padding-navigation: 1rem 3rem;
+
+  /* Button Padding */
+  --button-padding: 0.75rem 1.5rem;
+
+  /* Font Sizing */
+  --font-size-heading: 5rem;
+  --font-size-super: calc(var(--font-size-heading) * 0.88);
+  --font-size-subtitle: calc(var(--font-size-heading) * 0.61);
+  --font-size-subhead: calc(var(--font-size-heading) * 0.39);
+  --font-size-text: calc(var(--font-size-heading) * 0.22);
+
+  /* Transition and Effects */
+  --transition-fast: 0.3s ease-in-out;
+  --transition-normal: 0.5s ease-in-out;
+
+  --box-shadow-light: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+  --box-shadow-heavy: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+
+  /* Animations */
+  --slideup-page: slideup 1s ease-out forwards;
+  --slideup-text: slideup 1s ease-out forwards;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
+/* Base Styles */
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-fitzgerald);
 }
 
-a {
-  color: inherit;
+/* Component and Utility Styles */
+.main {
+  padding: var(--padding-main);
+  background-color: var(--color-main);
+  opacity: 0;
+  animation: var(--slideup-page);
+  animation-delay: 0.75s;
+}
+
+.button-simple {
+  font-family: var(--font-karla);
   text-decoration: none;
+  color: var(--color-accent);
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+}
+.button-main,
+.button-secondary,
+.button-tertiary,
+.button-accent,
+.button-neutral {
+  padding: var(--button-padding);
+  border-radius: var(--border-radius-medium);
+  transition: var(--transition-normal);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* adjust as needed */
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.tag,
+.tag-small {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: var(--font-size-text);
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+}
+
+.tag-small {
+  padding: 0.1rem 0.5rem;
+  font-size: calc(var(--font-size-text) * 0.8);
+}
+
+/* Loading Styles */
+.loading {
+}
+
+/* Animations */
+@keyframes slideup {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsive Adjustments */
+
+/* Main */
+@media (min-width: 1200px) {
+  /* Tablet Styles */
+  /* Adjust styles as needed */
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  /* Tablet Styles */
+  /* Adjust styles as needed */
+}
+
+/* Cellphone */
+@media (max-width: 500px) {
+  /* Mobile Styles */
+  /* Adjust styles as needed */
 }
