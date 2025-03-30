@@ -1,0 +1,44 @@
+.basic_piece_display {
+  width: 100%;
+  height: 550px;
+  padding: 3.5rem;
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.basic_piece_display img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+.basic_piece_display span {
+  width: 100%;
+}
+.basic_piece_display small {
+  font-family: var(--font-karla);
+  color: var(--grey);
+}
+
+.contact_form {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.contact_form button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  padding: 1rem 0;
+  color: var(--color-accent);
+}
+.contact_form h3 {
+  font-size: 2rem;
+  color: var(--color-accent);
+  padding: 1rem 0rem;
+}

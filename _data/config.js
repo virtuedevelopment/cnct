@@ -46,26 +46,34 @@ const configurations = {
         ],
     },
 
-    // Backend configuration
-    backend: {
-        apiUrl: '',  // API Base URL
-        apiKey: '',  // API Key if needed
-        dbUrl: '',  // Database URL if different from API
-        dbPassword: '',  // Database password if needed
-    },
-
-    // Terms of service and other legal links
-    legal: {
-        termsOfServiceUrl: '',  // URL to the terms of service
-        privacyPolicyUrl: '',  // URL to the privacy policy
-        copyrightNotice: '',  // Copyright notice text
-    },
 
     // Optional: Categories and other lists used in the site
-    categoryList: [
-        { category: 'Example', sub_categories: ['Sub-example'] },
-        // More categories
-    ],
+    portfolio: [
+        {
+            title: "Sunsets in Martinique",
+            author: "Amelie Bella",
+            image: "https://images.pexels.com/photos/60217/pexels-photo-60217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            story: ""
+        },
+        {
+            title: "The Peak of Artistry",
+            author: "Amelie Bella",
+            image: "https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            story: ""
+        },
+        {
+            title: "Shin Shibuya",
+            author: "Amelie Bella",
+            image: "https://images.pexels.com/photos/31326827/pexels-photo-31326827/free-photo-of-traditional-japanese-restaurant-interior-with-natural-light.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            story: ""
+        },
+        {
+            title: "Galapagos Animal Sanctuary",
+            author: "Amelie Bella",
+            image: "https://images.pexels.com/photos/5486959/pexels-photo-5486959.jpeg?auto=compress&cs=tinysrgb&w=600",
+            story: ""
+        }
+    ]
 };
 
 export default configurations;

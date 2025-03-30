@@ -3,30 +3,104 @@
 } */
 .header {
   width: 100%;
-  min-height: 60svh;
+  min-height: 50svh;
   /* border: dashed 1px red; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
 }
-.header h1 {
-  font-size: 12rem;
-  text-align: center;
-  letter-spacing: -4px;
-  font-weight: 300;
-  color: var(--color-secondary);
-  display: flex;
+.header p {
+  font-size: 16px;
+  font-weight: 100;
+  color: var(--color-accent);
   animation: var(--slideup-text);
   animation-delay: 1.75s;
   opacity: 0;
+  width: 80%;
 }
-.header h1 span {
-  font-size: 5rem;
-}
-.header img {
-  position: absolute;
+.header .about {
+  width: 100%;
   height: 100%;
-  max-width: 100%;
-  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.header .portfolio {
+  width: 100%;
+  max-height: 60svh;
+  /* border: dashed 1px red; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  color: var(--color-accent);
+  animation: var(--slideup-text);
+  animation-delay: 2s;
+  opacity: 0;
+}
+.header .about h2 {
+  color: var(--color-accent);
+  font-size: 18px;
+}
+
+.portfolio_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contact_section {
+  min-height: 50svh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+@media (min-width: 1200px) {
+  /* Tablet Styles */
+  /* Adjust styles as needed */
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  /* Tablet Styles */
+  /* Adjust styles as needed */
+  .header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .header p {
+    width: 100%;
+  }
+
+  .header .portfolio {
+    width: 100%;
+    min-height: 60svh;
+    /* border: dashed 1px red; */
+    display: grid;
+    grid-template-columns: 1fr;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    color: var(--color-accent);
+    animation: var(--slideup-text);
+    animation-delay: 2s;
+    opacity: 0;
+  }
+
+  .portfolio_section {
+    grid-template-columns: 1fr;
+  }
+
+  .contact_section {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cellphone */
+@media (max-width: 500px) {
+  /* Mobile Styles */
+  /* Adjust styles as needed */
 }
