@@ -28,13 +28,21 @@ export default function Home() {
       </header>
 
       <section className={styles.portfolio_section}>
-        {configurations.portfolio.map((piece) => (
+        {configurations.portfolio_2.map((piece) => (
           <BasicPieceDisplay key={piece.title} Piece={piece} />
         ))}
       </section>
-      
+
       <section className={styles.contact_section}>
         <ContactForm />
+
+        <div className={styles.about}>
+          <p>
+            At CNCT PR, we operate at the intersection of heart and hustle —
+            combining the agility and warmth of independent publicists with the
+            strategic power of a full-service PR agency.
+          </p>
+        </div>
       </section>
     </main>
   );

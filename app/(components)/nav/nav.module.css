@@ -1,11 +1,60 @@
 .navigation {
   background-color: var(--color-main);
+  position: relative;
 }
+
+.mobile_menu_nav_open {
+  position: fixed;
+  width: 100%;
+  height: 100svh;
+  background-color: rgba(41, 48, 65, 0.75);
+  backdrop-filter: blur(3px);
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.mobile_menu_nav_open button {
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 20px;
+}
+.mobile_menu_nav_open ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.mobile_menu_nav_open ul li a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 2.5rem;
+  transition: var(--transition-normal);
+  font-family: var(--font-karla);
+  font-weight: 100;
+}
+.mobile_menu_nav_open ul li a:hover {
+  color: var(--color-main);
+  text-decoration: underline;
+  transition: var(--transition-normal);
+}
+
 .action {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 3rem;
+  padding: var(--padding-navigation);
 }
 
 /*social section */
@@ -28,14 +77,11 @@
   justify-content: center;
 }
 .route_nav h3 {
-  font-size: 2.5rem;
-  font-weight: 100;
+  font-family: var(--font-fitzgerald-bold);
+  font-size: 2rem;
   color: var(--black);
   text-align: center;
-  letter-spacing: -4px;
-  animation: var(--text-fade-in);
-  animation-delay: 2s;
-  opacity: 0;
+  letter-spacing: -2px;
 }
 .route_nav ul {
   list-style: none;
@@ -44,10 +90,7 @@
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-  padding: 2rem 1rem;
-  animation: var(--text-fade-in);
-  animation-delay: 2.75s;
-  opacity: 0;
+  padding: 1rem;
 }
 .route_nav ul li a {
   text-decoration: none;
@@ -62,4 +105,51 @@
   text-decoration: underline;
   transition: var(--transition-normal);
   font-size: 18px;
+}
+.route_nav button {
+  display: none;
+}
+
+/* Media Queries for Responsive Adjustments */
+
+/* Main */
+@media (min-width: 1200px) {
+  /* Tablet Styles */
+  /* Adjust styles as needed */
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  /* Tablet Styles */
+  /* Adjust styles as needed */
+  .route_nav {
+    gap: 1.25rem;
+  }
+  .route_nav ul {
+    display: none;
+  }
+  .route_nav h3 {
+    font-family: var(--font-fitzgerald-bold);
+    font-size: 1.75rem;
+  }
+  .route_nav button {
+    display: block;
+  }
+}
+
+/* Cellphone */
+@media (max-width: 500px) {
+  /* Mobile Styles */
+  /* Adjust styles as needed */
+  .social_icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+  .social_icons a svg {
+    color: var(--color-accent);
+    width: 14px;
+    height: 14px;
+  }
 }

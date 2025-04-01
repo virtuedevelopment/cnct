@@ -71,6 +71,9 @@
   font-size: 14px;
   letter-spacing: -0.5px;
   transition: var(--transition-normal);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 .button-simple:hover {
   text-decoration: underline;

@@ -52,7 +52,7 @@ const configurations = {
         {
             title: "Sunsets in Martinique",
             author: "Amelie Bella",
-            image: "https://images.pexels.com/photos/60217/pexels-photo-60217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            image: "https://images.pexels.com/photos/5769696/pexels-photo-5769696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             story: ""
         },
         {
@@ -60,7 +60,9 @@ const configurations = {
             author: "Amelie Bella",
             image: "https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             story: ""
-        },
+        }
+    ],
+    portfolio_2: [
         {
             title: "Shin Shibuya",
             author: "Amelie Bella",
@@ -71,6 +73,30 @@ const configurations = {
             title: "Galapagos Animal Sanctuary",
             author: "Amelie Bella",
             image: "https://images.pexels.com/photos/5486959/pexels-photo-5486959.jpeg?auto=compress&cs=tinysrgb&w=600",
+            story: ""
+        },
+        {
+            title: "Favourite Destinations",
+            author: "Amelie Bella",
+            image: "https://images.pexels.com/photos/16549939/pexels-photo-16549939/free-photo-of-lisbon-old-town-street.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            story: ""
+        },
+        {
+            title: "The London Bridge",
+            author: "Amelie Bella",
+            image: "https://images.pexels.com/photos/31147777/pexels-photo-31147777/free-photo-of-iconic-big-ben-and-red-buses-in-london.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            story: ""
+        },
+        {
+            title: "Yellow Stone Park",
+            author: "Amelie Bella",
+            image: "https://images.pexels.com/photos/31317381/pexels-photo-31317381/free-photo-of-majestic-bison-roaming-yellowstone-landscape.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            story: ""
+        },
+        {
+            title: "The best bakery in Belgium",
+            author: "Amelie Bella",
+            image: "https://images.pexels.com/photos/29872516/pexels-photo-29872516/free-photo-of-aerial-view-of-nice-s-historic-mediterranean-rooftops.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             story: ""
         }
     ]
