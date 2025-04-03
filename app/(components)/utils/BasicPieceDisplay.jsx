@@ -1,15 +1,22 @@
 import React from "react";
 import styles from "./utils.module.css";
-import Image from "next/image";
+import Link from "next/link";
 
 export default function BasicPieceDisplay({ Piece }) {
   return (
-    <div className={styles.basic_piece_display}>
+    <Link
+      href="/"
+      className={styles.basic_piece_display}
+      style={{
+        "--piece-image": `url(${Piece.image})`,
+      }}
+    >
       <img alt={Piece.title} src={Piece.image} />
       <span>
-        <p>{Piece.title}</p>
+        <h4>{Piece.title}</h4>
         <small>{Piece.author}</small>
+        <p>{Piece.story}</p>
       </span>
-    </div>
+    </Link>
   );
 }

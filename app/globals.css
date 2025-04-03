@@ -5,12 +5,12 @@
   --black: #293041;
   --grey: #8f857a;
 
-  /* Color Variables */
+  /* Color Variables  */
   --color-main: #ffebcd;
   --color-secondary: #ffd699;
-  --color-tertiary: #8f857a;
+  --color-tertiary: rgb(194, 148, 108);
   --color-accent: #70675f;
-  --color-neutral: ;
+  --color-neutral: rgb(163, 129, 106);
 
   /* Border Radii */
   --border-rad-large: 5px;
@@ -33,7 +33,7 @@
 
   /* Transition and Effects */
   --transition-fast: 0.3s ease-in-out;
-  --transition-normal: 0.5s ease-in-out;
+  --transition-normal: 1s ease-in-out;
 
   --box-shadow-light: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
   --box-shadow-heavy: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
@@ -60,27 +60,37 @@
   background-color: var(--color-main);
   opacity: 0;
   animation: var(--slideup-page);
-  animation-delay: 0.75s;
+  animation-delay: 0.5s;
 }
 
 .button-simple {
   font-family: var(--font-karla);
   text-decoration: none;
-  color: var(--color-accent);
+  color: var(--color-neutral);
   cursor: pointer;
   font-size: 14px;
   letter-spacing: -0.5px;
-  transition: var(--transition-normal);
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 .button-simple:hover {
-  text-decoration: underline;
-  transition: var(--transition-normal);
+  font-style: italic;
 }
 
-.button-main,
+.button-main {
+  text-decoration: none;
+  padding: var(--button-padding);
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+  transition: var(--transition-normal);
+  cursor: pointer;
+}
+.button-main:hover {
+  background-color: var(--color-neutral);
+  color: var(--white);
+}
+
 .button-secondary,
 .button-tertiary,
 .button-accent,

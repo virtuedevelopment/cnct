@@ -42,16 +42,16 @@ export default function Navbar() {
             <Link href={"/"}>Home</Link>
           </li>
           <li>
-            <Link href={"/"}>About Cnct</Link>
+            <Link href={"/about"}>About Cnct</Link>
           </li>
           <li>
-            <Link href={"/"}>Portfolio</Link>
+            <Link href={"/portfolio"}>Portfolio</Link>
           </li>
           <li>
-            <Link href={"/"}>Cnct Journal</Link>
+            <Link href={"/cnct-journal"}>Cnct Journal</Link>
           </li>
           <li>
-            <Link href={"/"}>Contact Us</Link>
+            <Link href={"/contact"}>Contact Us</Link>
           </li>
         </ul>
 
@@ -72,22 +72,22 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link onClick={toggleNav} href={"/"}>
+              <Link onClick={toggleNav} href={"/about"}>
                 About Cnct
               </Link>
             </li>
             <li>
-              <Link onClick={toggleNav} href={"/"}>
+              <Link onClick={toggleNav} href={"/portfolio"}>
                 Portfolio
               </Link>
             </li>
             <li>
-              <Link onClick={toggleNav} href={"/"}>
+              <Link onClick={toggleNav} href={"/cnct-journal"}>
                 Cnct Journal
               </Link>
             </li>
             <li>
-              <Link onClick={toggleNav} href={"/"}>
+              <Link onClick={toggleNav} href={"/contact"}>
                 Contact Us
               </Link>
             </li>

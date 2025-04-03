@@ -1,12 +1,15 @@
 .basic_piece_display {
   width: 100%;
-  height: 550px;
-  padding: 3.5rem;
-  gap: 1.5rem;
+  height: 100%;
+  padding: 3rem;
+  /* gap: 1.5rem; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  text-decoration: none;
+  color: var(--color-neutral);
+  transition: var(--transition-normal);
 }
 .basic_piece_display img {
   width: 100%;
@@ -15,10 +18,21 @@
 }
 .basic_piece_display span {
   width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.basic_piece_display h4 {
+  font-family: var(--font-fitzgerald-italic);
 }
 .basic_piece_display small {
   font-family: var(--font-karla);
   color: var(--grey);
+}
+.basic_piece_display p {
+  color: var(--white) !important;
+  display: none;
 }
 
 .contact_form {
@@ -41,6 +55,40 @@
   font-size: 2rem;
   color: var(--color-accent);
   padding: 1rem 0rem;
+}
+
+.basic_piece_display:hover {
+  background-image: linear-gradient(
+      rgba(163, 129, 106, 0.95),
+      rgba(163, 129, 106, 0.25)
+    ),
+    var(--piece-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.basic_piece_display:hover img {
+  display: none;
+}
+.basic_piece_display:hover h4 {
+  color: var(--white);
+  font-size: 2rem;
+}
+.basic_piece_display:hover p {
+  display: block;
+  font-size: 14px !important;
+  width: 100%;
+  opacity: 1;
+  animation: none;
+  line-height: 1.5;
+}
+.basic_piece_display:hover small {
+  color: var(--white);
 }
 
 /* Media Queries for Responsive Adjustments */
