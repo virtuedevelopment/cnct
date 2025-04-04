@@ -32,6 +32,13 @@
   justify-content: flex-end;
   gap: 1rem;
 }
+.header .about img {
+  width: 80px;
+  height: 80px;
+  animation: var(--slideup-text);
+  animation-delay: 1.75s;
+  opacity: 0;
+}
 .header .portfolio {
   width: 100%;
   /* border: dashed 1px red; */
@@ -107,7 +114,7 @@
   font-family: var(--font-fitzgerald-bold);
   color: var(--black);
 }
-.featured .description h3 b{
+.featured .description h3 b {
   color: var(--color-neutral);
   font-family: var(--font-fitzgerald-italic);
 }

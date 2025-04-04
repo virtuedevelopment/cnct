@@ -62,6 +62,12 @@
   animation: var(--slideup-page);
   animation-delay: 0.5s;
 }
+.main_no_padding {
+  background-color: var(--color-main);
+  opacity: 0;
+  animation: var(--slideup-page);
+  animation-delay: 0.5s;
+}
 
 .button-simple {
   font-family: var(--font-karla);

@@ -9,7 +9,7 @@ export default function Home() {
     <main className="main">
       <header className={styles.header}>
         <div className={styles.about}>
-          <h2>CNCT</h2>
+          <img src="/assets/logo.svg" alt="" className="logo" />
           <p className={styles.definition}>
             {" "}
             <span>Connection </span>(v.) <br />
@@ -55,7 +55,7 @@ export default function Home() {
         <div className={styles.description}>
           <span>
             <h3>
-              <b>"Cnct"</b> Journal
+              <b>"cnct"</b> Journal
             </h3>
             <p>Stories, insights, and moments from behind the scenes.</p>
           </span>
