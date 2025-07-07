@@ -131,7 +131,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: solid 0.5px var(--color-accent);
+  border-bottom: solid 0.5px var(--color-tertiary);
 }
 .inputbox input {
   background-color: transparent;
@@ -149,12 +149,15 @@
   outline: none;
 }
 .inputbox input::placeholder {
-  color: var(--color-accent);
+  color: var(--color-tertiary);
 }
 .inputbox textarea {
   resize: none;
   height: 100px;
   padding: 1rem 0;
+}
+.inputbox textarea::placeholder {
+  color: var(--color-tertiary);
 }
 
 /* Loading Styles */

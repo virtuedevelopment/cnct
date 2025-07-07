@@ -1,8 +1,11 @@
 import localFont from "next/font/local";
-import { Karla } from "next/font/google";
+import { Karla, Fraunces } from "next/font/google";
 import Navbar from "./(components)/nav/Navbar";
 import Footer from "./(components)/nav/Footer";
 import "./globals.css";
+
+
+
 
 // ✅ Local font
 const fitzgerald = localFont({
@@ -30,6 +33,8 @@ const karla = Karla({
   variable: "--font-karla",
   subsets: ["latin"],
 });
+
+
 
 export default function RootLayout({ children }) {
   return (
