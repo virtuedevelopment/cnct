@@ -2,24 +2,16 @@ import React from "react";
 import styles from "./page.module.css";
 import configurations from "@/_data/config";
 import Main_display from "@/app/(components)/portfolio_displays/Main_display";
+import PortfolioDisplay from "./PortfolioDisplay";
 
 export default function Portfolio() {
   return (
     <main className="main">
-      <header>
-        <h1>PORTFOLIO</h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae
-          numquam corrupti, ab facilis, atque, suscipit modi temporibus enim
-          beatae neque aliquam pariatur natus impedit unde minima earum rerum?
-          Quos, nulla.
-        </p>
-      </header>
-      <section className={styles.portfolio_display}>
-        {configurations.portfolio.map((index, piece) => (
-          <Main_display key={index} portfolio={piece}></Main_display>
+      <header className={styles.portfolio_selector}>
+        {configurations.portfolio_2.map((item, index) => (
+          <PortfolioDisplay key={index} item={item} />
         ))}
-      </section>
+      </header>
     </main>
   );
 }

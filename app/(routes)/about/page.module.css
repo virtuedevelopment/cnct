@@ -13,6 +13,7 @@
   opacity: 0;
 }
 .about_header section {
+  background-color: var(--white);
   padding: var(--padding-main);
   display: flex;
   flex-direction: column;
@@ -60,6 +61,7 @@
   width: 100%;
   min-height: 100svh;
   overflow: hidden;
+  background-color: var(--white);
 }
 .what_we_do h2 {
   font-size: calc(175vw / 12); /* "Connection" has exactly 10 letters */

@@ -29,7 +29,7 @@ export default function About() {
               alt="our logo"
               className={styles.logo}
             />
-            Featured in Forbes, Drift Travel Magazine, MNI Alive, and more, CNCT
+            <br /> Featured in Forbes, Drift Travel Magazine, MNI Alive, and more, CNCT
             PR has led FAM trips, owned trade show floors, shaped impactful
             content strategies, and brought stories vividly to life—both on the
             ground and in the headlines. We are not just here to pitch; we are

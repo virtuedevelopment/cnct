@@ -57,7 +57,7 @@
 /* Component and Utility Styles */
 .main {
   padding: var(--padding-main);
-  background-color: var(--color-main);
+  background-color: var(--white);
   opacity: 0;
   animation: var(--slideup-page);
   animation-delay: 0.5s;
@@ -131,7 +131,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: solid 0.5px var(--color-tertiary);
+  border-bottom: solid 0.5px var(--grey);
 }
 .inputbox input {
   background-color: transparent;
@@ -149,7 +149,7 @@
   outline: none;
 }
 .inputbox input::placeholder {
-  color: var(--color-tertiary);
+  color: var(--grey);
 }
 .inputbox textarea {
   resize: none;
@@ -157,7 +157,7 @@
   padding: 1rem 0;
 }
 .inputbox textarea::placeholder {
-  color: var(--color-tertiary);
+  color: var(--grey);
 }
 
 /* Loading Styles */
