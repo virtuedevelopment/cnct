@@ -55,7 +55,7 @@ export default function Home() {
         <div className={styles.description}>
           <span>
             <h3>
-              <b>"cnct"</b> Journal
+              <b>"CNCT"</b> Journal
             </h3>
             <p>Stories, insights, and moments from behind the scenes.</p>
           </span>

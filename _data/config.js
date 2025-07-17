@@ -94,9 +94,10 @@ const configurations = {
             story: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
         },
         {
-            title: "The best bakery in Belgium",
+            title: "Revving Up for Junkanoo: A Preview of this Year’s Bahamian Bash",
             author: "Amelie Bella",
             image: "https://images.pexels.com/photos/29872516/pexels-photo-29872516/free-photo-of-aerial-view-of-nice-s-historic-mediterranean-rooftops.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            date: "January 20th, 2025",
             story: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
         }
     ],
