@@ -1,22 +1,16 @@
 import localFont from "next/font/local";
-import { Karla, Bodoni_Moda } from "next/font/google";
+import { Inter, Bodoni_Moda } from "next/font/google";
 import Navbar from "./(components)/nav/Navbar";
 import Footer from "./(components)/nav/Footer";
 import "./globals.css";
 
-// ✅ Local font
-// const fitzgerald = localFont({
-//   src: "./fonts/fitzgerald.ttf",
-//   variable: "--font-fitzgerald",
-//   display: "swap",
-// });
 
-// // ✅ Local font
-// const fitzgeraldBold = localFont({
-//   src: "./fonts/fitzgeraldBold.ttf",
-//   variable: "--font-fitzgerald-bold",
-//   display: "swap",
-// });
+// ✅ Local font
+const vogue = localFont({
+  src: "./fonts/vogue.ttf",
+  variable: "--font-vogue",
+  display: "swap",
+});
 
 // ✅ Local font
 // const fitzgeraldItalic = localFont({
@@ -26,8 +20,8 @@ import "./globals.css";
 // });
 
 // ✅ Google font
-const karla = Karla({
-  variable: "--font-karla",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -39,7 +33,10 @@ const bodani = Bodoni_Moda({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={` ${bodani.variable} ${karla.variable}  `}>
+    <html
+      lang="en"
+      className={` ${bodani.variable} ${inter.variable} ${vogue.variable}`}
+    >
       <body>
         <Navbar />
         {children}

@@ -51,7 +51,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-fitzgerald);
+  font-family: var(--font-vouge);
 }
 
 /* Component and Utility Styles */
@@ -70,18 +70,14 @@
 }
 
 .button-simple {
-  font-family: var(--font-karla);
+  font-family: var(--font-inter);
   text-decoration: none;
   color: var(--color-neutral);
   cursor: pointer;
-  font-size: 14px;
-  letter-spacing: -0.5px;
+  font-size: 16px;
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
-.button-simple:hover {
-  font-style: italic;
 }
 
 .button-main {

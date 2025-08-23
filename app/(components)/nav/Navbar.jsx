@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import styles from "./nav.module.css";
 import Link from "next/link";
-import { Instagram, Twitter, Youtube, Linkedin } from "lucide-react";
+
 
 export default function Navbar() {
   const [mobileNav, setMobileNav] = useState(false);
@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navigation}>
       <section className={styles.action}>
-        <div className={styles.social_icons}>
+        {/* <div className={styles.social_icons}>
           <Link href={"/"} className={styles.social_btn}>
             <Instagram strokeWidth={1.5} />
           </Link>
@@ -33,10 +33,13 @@ export default function Navbar() {
         </div>
         <Link href={"/"} className="button-simple">
           CNCT WITH US
-        </Link>
+        </Link> */}
       </section>
+
       <section className={styles.route_nav}>
-        <h3>Share your story with us.</h3>
+        <Link className={styles.logo} href={"/"}>
+          <img src="/assets/logo.svg" alt="logo" />
+        </Link>
         <ul>
           <li>
             <Link href={"/"}>Home</Link>
