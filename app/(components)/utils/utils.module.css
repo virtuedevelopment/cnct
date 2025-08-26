@@ -14,20 +14,19 @@
 .basic_piece_display img {
   width: 100%;
   max-height: 400px;
-  object-fit: contain;
+  object-fit: cover;
 }
 .basic_piece_display span {
   width: 100%;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 .basic_piece_display h4 {
-  font-family: var(--font-vogue);
+  font-family: var(--font-raindrop);
 }
 .basic_piece_display small {
-  font-family: var(--font-karla);
   color: var(--grey);
 }
 .basic_piece_display p {
@@ -40,28 +39,35 @@
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  padding: 3.5rem;
+  padding: 2.5rem;
 }
-.contact_form button {
-  background-color: transparent;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  cursor: pointer;
+.contact_form .form_btn {
+  width: 150px;
+  background-color: var(--color-neutral);
   padding: 1rem 0;
-  color: var(--color-accent);
+  border: none;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+.form_btn:hover {
+  transition: var(--transition-normal);
+  background-color: var(--color-secondary);
+}
+.form_btn p {
+  color: var(--white);
 }
 .contact_form h3 {
   font-size: 2rem;
   color: var(--color-accent);
+  font-family: var(--font-raindrop);
   padding: 1rem 0rem;
 }
 
 .basic_piece_display:hover {
   background-image: linear-gradient(
-      rgba(163, 129, 106, 0.95),
-      rgba(163, 129, 106, 0.25)
+      rgba(33, 33, 33, 0.9),
+      rgba(33, 33, 33, 0.95)
     ),
     var(--piece-image);
   background-size: cover;
@@ -72,7 +78,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .basic_piece_display:hover img {
   display: none;
 }
@@ -99,7 +104,6 @@
   /* Tablet Styles */
   /* Adjust styles as needed */
 }
-
 /* Tablet */
 @media (max-width: 1000px) {
   /* Tablet Styles */
@@ -111,7 +115,7 @@
   .basic_piece_display {
     width: 100%;
     height: auto;
-    padding: 0;
+    padding: 1.5rem;
     gap: 2rem;
   }
   .basic_piece_display span {
@@ -119,14 +123,20 @@
     text-align: center;
   }
   .basic_piece_display small {
-    font-family: var(--font-karla);
     color: var(--grey);
     text-align: center;
   }
 }
-
 /* Cellphone */
 @media (max-width: 500px) {
   /* Mobile Styles */
   /* Adjust styles as needed */
+
+  .contact_form {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
 }

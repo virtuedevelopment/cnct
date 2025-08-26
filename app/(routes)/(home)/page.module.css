@@ -1,12 +1,9 @@
-/* .header * {
-  border: dashed 1px red;
-} */
 .header {
   width: 100%;
   min-height: 50svh;
   /* border: dashed 1px red; */
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 1.5rem;
   margin-block: 2rem;
 }
@@ -20,7 +17,6 @@
   width: 80%;
 }
 .header .definition span {
-  font-family: var(--font-fitzgerald-italic);
   color: var(--color-tertiary);
 }
 .header .about {
@@ -39,6 +35,10 @@
   animation-delay: 1.75s;
   opacity: 0;
 }
+.home_img {
+  width: 100%;
+  height: 100%;
+}
 .header .portfolio {
   width: 100%;
   /* border: dashed 1px red; */
@@ -52,6 +52,24 @@
 .header .about h2 {
   color: var(--color-accent);
   font-size: 18px;
+}
+
+.portfolio {
+  margin-block: 5rem;
+  display: grid;
+}
+.portfolio h2 {
+  font-size: var(--font-size-heading);
+  font-family: var(--font-raindrop);
+  color: var(--black);
+}
+.portfolio p {
+  font-family: var(--font-inter);
+  color: var(--color-accent);
+  font-weight: 200;
+  width: 50%;
+  line-height: 2;
+  margin-bottom: 2rem;
 }
 
 .portfolio_section {
@@ -100,23 +118,20 @@
 }
 .featured .description span p {
   color: var(--color-neutral);
-  font-family: var(--font-fitzgerald-italic);
 }
 .featured .description span .txt {
   color: var(--color-accent);
-  font-family: var(--font-fitzgerald);
   font-weight: 200;
   padding: 1.5rem 0;
   font-size: 14px;
 }
 .featured .description h3 {
   font-size: 4rem;
-  font-family: var(--font-fitzgerald-bold);
+  font-family: var(--font-raindrop);
   color: var(--black);
 }
 .featured .description h3 b {
   color: var(--color-neutral);
-  font-family: var(--font-fitzgerald-italic);
 }
 .featured img {
   width: 100%;
@@ -181,12 +196,25 @@
 @media (max-width: 500px) {
   /* Mobile Styles */
   /* Adjust styles as needed */
+  .portfolio h2 {
+    font-size: var(--font-size-subhead);
+    font-family: var(--font-raindrop);
+    color: var(--black);
+  }
+  .portfolio p {
+    font-family: var(--font-inter);
+    color: var(--color-accent);
+    font-weight: 200;
+    width: 100%;
+    line-height: 2;
+    margin-bottom: 2rem;
+  }
+
   .contact_section .reviews {
     grid-template-columns: 1fr;
   }
   .featured .description h3 {
     font-size: 3rem;
-    font-family: var(--font-fitzgerald-bold);
     color: var(--black);
   }
 }

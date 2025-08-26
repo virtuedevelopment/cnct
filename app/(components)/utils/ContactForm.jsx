@@ -23,7 +23,9 @@ export default function ContactForm() {
       <div className="inputbox">
         <textarea placeholder="Tell us more..."></textarea>
       </div>
-      <button>Submit</button>
+      <button type="submit" className={styles.form_btn}>
+        <p>Cnct with us</p>
+      </button>
     </form>
   );
 }

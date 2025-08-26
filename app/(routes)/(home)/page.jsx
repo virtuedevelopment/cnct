@@ -25,17 +25,27 @@ export default function Home() {
             Discover More...
           </Link>
         </div>
-        <div className={styles.portfolio}>
-          {configurations.portfolio.map((piece) => (
+        <img
+          className={styles.home_img}
+          src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?cs=srgb&dl=pexels-te-lensfix-380994-1371360.jpg&fm=jpg"
+          alt="header image"
+        />
+      </header>
+
+      <section className={styles.portfolio}>
+        <h2>View our Portfolio</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis
+          facilis dicta odit voluptatibus fuga fugiat iure natus! Consectetur
+          animi architecto facere dolore sit, totam voluptas molestiae! Velit
+          minima ex eaque.
+        </p>
+        
+        <div className={styles.portfolio_section}>
+          {configurations.portfolio_2.map((piece) => (
             <BasicPieceDisplay key={piece.title} Piece={piece} />
           ))}
         </div>
-      </header>
-
-      <section className={styles.portfolio_section}>
-        {configurations.portfolio_2.map((piece) => (
-          <BasicPieceDisplay key={piece.title} Piece={piece} />
-        ))}
       </section>
 
       <section className={styles.contact_section}>
@@ -55,7 +65,7 @@ export default function Home() {
         <div className={styles.description}>
           <span>
             <h3>
-              <b>"CNCT"</b> Journal
+              <b>Cnct</b> Journal
             </h3>
             <p>Stories, insights, and moments from behind the scenes.</p>
           </span>
@@ -75,7 +85,7 @@ export default function Home() {
         </div>
 
         <img
-          src="https://images.pexels.com/photos/8791249/pexels-photo-8791249.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?cs=srgb&dl=pexels-te-lensfix-380994-1371360.jpg&fm=jpg"
           alt="featured image"
         />
       </section>

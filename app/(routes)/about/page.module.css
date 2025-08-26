@@ -23,7 +23,7 @@
 }
 .about_header h1 {
   font-size: 3rem;
-  font-family: var(--font-fitzgerald-bold);
+  font-family: var(--font-raindrop);
   color: var(--color-accent);
   animation: var(--slideup-text);
   animation-delay: 1.75s;
@@ -31,10 +31,10 @@
 }
 .about_header h1 span {
   color: var(--color-tertiary);
-  font-family: var(--font-fitzgerald-italic);
 }
 .about_header h4 {
   color: var(--color-neutral);
+  font-weight: 200;
   font-size: 16px;
   width: 80%;
   margin-bottom: 2rem;
@@ -43,7 +43,6 @@
   opacity: 0;
 }
 .about_header p {
-  font-family: var(--font-karla);
   font-weight: 200;
   line-height: 1.5;
   color: var(--color-accent);
@@ -69,7 +68,6 @@
   text-align: center; /* optional: keeps it neatly centered */
   margin: 0;
   padding: 0;
-  font-family: var(--font-fitzgerald-italic);
   color: var(--color-main);
   opacity: 0.95;
 }
@@ -93,14 +91,12 @@
 }
 .wwd_item b {
   color: var(--color-tertiary);
-  font-family: var(--font-karla);
   font-weight: 300;
   margin-bottom: 1rem;
   font-size: 18px;
 }
 .wwd_item p {
   color: var(--color-neutral);
-  font-family: var(--font-karla);
   font-weight: 100;
   line-height: 1.5;
   font-size: 14px;

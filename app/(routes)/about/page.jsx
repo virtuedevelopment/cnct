@@ -9,7 +9,7 @@ export default function About() {
       <header className={styles.about_header}>
         <section>
           <h1>
-            About <span>"cnct"</span> Public Relations
+            About <span>cnct</span> Public Relations
           </h1>
           <h4>
             Every brand has a unique identity, and our mission is to help you
@@ -29,12 +29,12 @@ export default function About() {
               alt="our logo"
               className={styles.logo}
             />
-            <br /> Featured in Forbes, Drift Travel Magazine, MNI Alive, and more, CNCT
-            PR has led FAM trips, owned trade show floors, shaped impactful
-            content strategies, and brought stories vividly to life—both on the
-            ground and in the headlines. We are not just here to pitch; we are
-            here to connect. Person to person. Story to story. Heart to heart.{" "}
-            <br />
+            <br /> Featured in Forbes, Drift Travel Magazine, MNI Alive, and
+            more, CNCT PR has led FAM trips, owned trade show floors, shaped
+            impactful content strategies, and brought stories vividly to
+            life—both on the ground and in the headlines. We are not just here
+            to pitch; we are here to connect. Person to person. Story to story.
+            Heart to heart. <br />
             <br />
             With sharp strategy, real-world expertise, and editorial edge, CNCT
             PR amplifies your voice and puts the human back into public
