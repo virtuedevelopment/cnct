@@ -3,8 +3,41 @@ import Link from "next/link";
 import configurations from "@/_data/config";
 import BasicPieceDisplay from "@/app/(components)/utils/BasicPieceDisplay";
 import ContactForm from "@/app/(components)/utils/ContactForm";
+import { getStoryblokApi } from "@storyblok/react";
 
-export default function Home() {
+function normalizePortfolioItem(story) {
+  const c = story.content || {};
+  return {
+    title: c.title || story.name,
+    image: c.cover?.filename || null,
+    summary: c.summary || "",
+    author: c.author || "",
+    slug: "/" + story.full_slug, // → /portfolio/example_campaign
+  };
+}
+
+export default async function Home() {
+  const sb = getStoryblokApi();
+  async function fetchPortfolio(version) {
+    const { data } = await sb.get("cdn/stories", {
+      version,
+      per_page: 6, // limit for homepage
+      starts_with: "portfolio/",
+      sort_by: "first_published_at:desc",
+      filter_query: { component: { in: "portfolio_item" } },
+    });
+    return data?.stories ?? [];
+  }
+
+  let stories = [];
+  try {
+    stories = await fetchPortfolio("published");
+  } catch {
+    stories = await fetchPortfolio("draft");
+  }
+
+  const pieces = stories.map(normalizePortfolioItem);
+
   return (
     <main className="main">
       <header className={styles.header}>
@@ -40,10 +73,10 @@ export default function Home() {
           animi architecto facere dolore sit, totam voluptas molestiae! Velit
           minima ex eaque.
         </p>
-        
+
         <div className={styles.portfolio_section}>
-          {configurations.portfolio_2.map((piece) => (
-            <BasicPieceDisplay key={piece.title} Piece={piece} />
+          {pieces.map((piece) => (
+            <BasicPieceDisplay key={piece.slug} Piece={piece} />
           ))}
         </div>
       </section>

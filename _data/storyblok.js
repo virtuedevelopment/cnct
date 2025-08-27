@@ -9,3 +9,4 @@ export function initStoryblok() {
     apiOptions: { region: "eu" }, // or "us"
   });
 }
+

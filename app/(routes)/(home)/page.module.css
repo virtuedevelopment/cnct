@@ -197,7 +197,7 @@
   /* Mobile Styles */
   /* Adjust styles as needed */
   .portfolio h2 {
-    font-size: var(--font-size-subhead);
+    font-size: var(--font-size-super);
     font-family: var(--font-raindrop);
     color: var(--black);
   }
