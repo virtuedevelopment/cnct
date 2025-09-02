@@ -1,13 +1,20 @@
 import React from "react";
 import styles from "./portfolioItem.module.css";
 import "../story.css";
-import { getStoryblokApi, renderRichText } from "@storyblok/react";
+import { renderRichText } from "@storyblok/react"; // only renderRichText is safe on server
+import StoryblokClient from "storyblok-js-client";
 import { normalizePortfolioItem } from "@/app/(components)/utils/normalizePortfolioItem";
 import Link from "next/link";
 
+// ✅ Optional: ISR to refresh every 5 minutes
+export const revalidate = 300;
+
 export default async function PortfolioItem({ params }) {
-  const sb = getStoryblokApi();
-  const slug = params.slug; // "example_campaign"
+  const slug = params.slug;
+
+  const sb = new StoryblokClient({
+    accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN,
+  });
 
   async function fetchStory(version) {
     const { data } = await sb.get(`cdn/stories/portfolio/${slug}`, { version });
@@ -20,24 +27,26 @@ export default async function PortfolioItem({ params }) {
   } catch {
     story = await fetchStory("draft");
   }
-  if (!story)
+
+  if (!story) {
     return (
       <main className={styles.notFound}>
         <h1>Not found</h1>
       </main>
     );
+  }
 
   const item = normalizePortfolioItem(story);
 
   return (
     <>
       <div className="main">
-        <Link href={"/portfolio"} className="button-main">
+        <Link href="/portfolio" className="button-main">
           Back to Portfolio
         </Link>
       </div>
+
       <main className="story-block-main">
-        {/* Main page content */}
         <section className="story-block-header">
           <h1>{item.title}</h1>
           {item.cover && (
@@ -71,7 +80,7 @@ export default async function PortfolioItem({ params }) {
               />
             )}
 
-            {item.gallery.length > 0 && (
+            {item.gallery?.length > 0 && (
               <div className="gallery">
                 {item.gallery.map((src, i) => (
                   <img
@@ -88,7 +97,7 @@ export default async function PortfolioItem({ params }) {
 
         <section className="story-block-footer">
           <p>Additional Links:</p>
-          {item.links.length > 0 && (
+          {item.links?.length > 0 && (
             <ul className="external-links">
               {item.links.map((l, i) => (
                 <li key={i}>
@@ -100,9 +109,6 @@ export default async function PortfolioItem({ params }) {
             </ul>
           )}
         </section>
-
-        {/* Optional: debug dump */}
-        {/* <pre>{JSON.stringify(story, null, 2)}</pre> */}
       </main>
     </>
   );

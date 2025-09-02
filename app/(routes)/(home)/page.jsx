@@ -3,7 +3,9 @@ import Link from "next/link";
 import configurations from "@/_data/config";
 import BasicPieceDisplay from "@/app/(components)/utils/BasicPieceDisplay";
 import ContactForm from "@/app/(components)/utils/ContactForm";
-import { getStoryblokApi } from "@storyblok/react";
+import StoryblokClient from "storyblok-js-client";
+
+export const revalidate = 300; // seconds
 
 function normalizePortfolioItem(story) {
   const c = story.content || {};
@@ -17,11 +19,14 @@ function normalizePortfolioItem(story) {
 }
 
 export default async function Home() {
-  const sb = getStoryblokApi();
+  const sb = new StoryblokClient({
+    accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN,
+  });
+
   async function fetchPortfolio(version) {
     const { data } = await sb.get("cdn/stories", {
       version,
-      per_page: 6, // limit for homepage
+      per_page: 6,
       starts_with: "portfolio/",
       sort_by: "first_published_at:desc",
       filter_query: { component: { in: "portfolio_item" } },
@@ -29,13 +34,9 @@ export default async function Home() {
     return data?.stories ?? [];
   }
 
-  let stories = [];
-  try {
-    stories = await fetchPortfolio("published");
-  } catch {
-    stories = await fetchPortfolio("draft");
-  }
-
+  const version =
+    process.env.STORYBLOK_PREVIEW === "true" ? "draft" : "published";
+  const stories = await fetchPortfolio(version);
   const pieces = stories.map(normalizePortfolioItem);
 
   return (
