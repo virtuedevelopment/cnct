@@ -6,7 +6,7 @@ export default function ContactForm() {
   return (
     <form className={styles.contact_form}>
       <h3>
-        W<span>e work with brands, destinations, organizations, etc</span>
+        We work with brands, destinations, organizations, etc
       </h3>
       <div className="inputbox">
         <input type="text" placeholder="Full Name*" required />

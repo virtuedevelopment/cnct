@@ -5,7 +5,6 @@ import ContactForm from "@/app/(components)/utils/ContactForm";
 export default function Contact() {
   return (
     <main className="main">
-      <header></header>
       <section className={styles.contact}>
         <ContactForm></ContactForm>
         <img

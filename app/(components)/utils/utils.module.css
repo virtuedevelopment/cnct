@@ -39,12 +39,12 @@
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  padding: 2.5rem;
+  padding: 2rem;
 }
 .contact_form .form_btn {
   width: 150px;
   background-color: var(--color-neutral);
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   border: none;
   margin-top: 25px;
   cursor: pointer;

@@ -1,6 +1,45 @@
 .header {
-  min-height: 70svh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+.header h1 {
+  font-size: var(--font-size-super);
+  font-family: var(--font-raindrop);
+  color: var(--color-neutral);
+}
+.header p {
+  width: 50%;
+  line-height: 2;
+  font-weight: 200;
+  color: var(--color-accent);
+  font-family: var(--font-inter);
+}
+.header img {
+  width: 100px;
+  height: 100px;
+}
+
+.selector_section {
+}
+.selector_section h2 {
+  color: var(--color-accent);
+  font-family: var(--font-inter);
+  font-weight: 400;
+}
+
+/* Cellphone */
+@media (max-width: 500px) {
+  /* Mobile Styles */
+  /* Adjust styles as needed */
+  .header {
+    padding: 0;
+  }
+  .header p {
+    width: 100%;
+  }
 }

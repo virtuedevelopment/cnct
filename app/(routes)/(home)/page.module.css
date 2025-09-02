@@ -59,9 +59,9 @@
   display: grid;
 }
 .portfolio h2 {
-  font-size: var(--font-size-heading);
+  font-size: var(--font-size-super);
   font-family: var(--font-raindrop);
-  color: var(--black);
+  color: var(--color-neutral);
 }
 .portfolio p {
   font-family: var(--font-inter);
@@ -92,6 +92,8 @@
 .contact_section .reviews p {
   font-size: 14px;
   padding: 0.75rem;
+  font-family: var(--font-inter);
+  font-weight: 200;
   color: var(--color-accent);
 }
 .contact_section .reviews small {
@@ -117,6 +119,8 @@
   justify-content: flex-start;
 }
 .featured .description span p {
+  font-family: var(--font-inter);
+  line-height: 1.5;
   color: var(--color-neutral);
 }
 .featured .description span .txt {
