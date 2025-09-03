@@ -30,6 +30,7 @@
   opacity: 0;
 }
 .about_header h1 span {
+  font-family: var(--font-raindrop);
   color: var(--color-tertiary);
 }
 .about_header h4 {

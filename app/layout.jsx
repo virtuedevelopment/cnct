@@ -8,8 +8,15 @@ import "./globals.css";
 initStoryblok();
 
 //✅ Local font
-const raindrop = localFont({
-  src: "./fonts/raindrop.otf",
+// const raindrop = localFont({
+//   src: "./fonts/raindrop.otf",
+//   variable: "--font-raindrop",
+//   display: "swap",
+// });
+
+//✅ Local font
+const kugile = localFont({
+  src: "./fonts/kugile.ttf",
   variable: "--font-raindrop",
   display: "swap",
 });
@@ -22,7 +29,7 @@ const inter = Inter({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${raindrop.variable}`}>
+    <html lang="en" className={`${inter.variable} ${kugile.variable}`}>
       <body>
         <Navbar />
         {children}

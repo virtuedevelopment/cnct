@@ -135,6 +135,7 @@
   color: var(--black);
 }
 .featured .description h3 b {
+  font-family: var(--font-raindrop);
   color: var(--color-neutral);
 }
 .featured img {
