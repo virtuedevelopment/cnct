@@ -69,11 +69,13 @@ export default async function Home() {
       <section className={styles.portfolio}>
         <h2>View our Portfolio</h2>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis
-          facilis dicta odit voluptatibus fuga fugiat iure natus! Consectetur
-          animi architecto facere dolore sit, totam voluptas molestiae! Velit
-          minima ex eaque.
+          We don’t just tell stories — we shape narratives that move audiences
+          and markets. Our portfolio reflects the thoughtful strategy, creative
+          precision, and long-term vision we bring to every collaboration.
         </p>
+        <Link href={"/portfolio"} className="button-main">
+          View More...
+        </Link>
 
         <div className={styles.portfolio_section}>
           {pieces.map((piece) => (

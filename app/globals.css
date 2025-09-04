@@ -26,7 +26,7 @@
 
   /* Font Sizing */
   --font-size-heading: 7rem;
-  --font-size-super: calc(var(--font-size-heading) * 0.88);
+  --font-size-super: calc(var(--font-size-heading) * 0.8);
   --font-size-subtitle: calc(var(--font-size-heading) * 0.61);
   --font-size-subhead: calc(var(--font-size-heading) * 0.39);
   --font-size-text: calc(var(--font-size-heading) * 0.22);
@@ -63,11 +63,12 @@
   animation: var(--slideup-page);
   animation-delay: 0.5s;
 }
+.main header,
 .main section {
-  margin-bottom: 50px;
+  margin-bottom: 10rem;
 }
 .main_no_padding {
-  background-color: var(--color-main);
+  background-color: var(--white);
   opacity: 0;
   animation: var(--slideup-page);
   animation-delay: 0.5s;
