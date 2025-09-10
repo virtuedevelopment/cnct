@@ -1,22 +1,27 @@
 .header {
   width: 100%;
-  min-height: 50svh;
+  min-height: 85svh;
   /* border: dashed 1px red; */
+  background: url("/images/hero_header.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
+  padding: var(--padding-main);
 }
 .header p {
   font-size: 16px;
   font-weight: 100;
-  color: var(--color-accent);
+  color: var(--white);
   animation: var(--slideup-text);
   animation-delay: 1.75s;
   opacity: 0;
   width: 80%;
 }
 .header .definition span {
-  color: var(--color-tertiary);
+  color: var(--color-secondary);
 }
 .header .about {
   width: 100%;
@@ -75,7 +80,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-
 .contact_section {
   min-height: 70svh;
   display: grid;

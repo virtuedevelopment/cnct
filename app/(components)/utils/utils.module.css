@@ -13,7 +13,7 @@
 }
 .basic_piece_display img {
   width: 100%;
-  max-height: 400px;
+  max-height: 500px;
   object-fit: cover;
 }
 .basic_piece_display span {
@@ -33,6 +33,7 @@
   color: var(--white) !important;
   display: none;
 }
+
 
 .contact_form {
   width: 100%;
@@ -63,6 +64,7 @@
   font-family: var(--font-raindrop);
   padding: 1rem 0rem;
 }
+
 
 .basic_piece_display:hover {
   background-image: linear-gradient(

@@ -19,6 +19,7 @@ function toPiece(story) {
 }
 
 export default async function Portfolio() {
+  
   const sb = new StoryblokClient({
     accessToken: process.env.NEXT_PUBLIC_STORYBLOK_TOKEN,
   });
