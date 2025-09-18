@@ -99,8 +99,8 @@
   color: var(--white);
 }
 
-/* Media Queries for Responsive Adjustments */
 
+/* Media Queries for Responsive Adjustments */
 /* Main */
 @media (min-width: 1200px) {
   /* Tablet Styles */

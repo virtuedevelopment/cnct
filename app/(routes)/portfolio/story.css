@@ -30,7 +30,8 @@
   width: 100%;
   height: auto;
   max-width: 1000px;
-  object-fit: contain;
+  max-height: 500px;
+  object-fit: cover;
 }
 
 .story-block-body {
@@ -44,7 +45,7 @@
 .details {
   max-width: 1000px;
   width: 100%;
-  background-color: var(--color-main);
+  /* background-color: var(--color-main); */
   color: var(--color-accent);
   margin-bottom: 2rem;
   padding: 1rem 1.5rem;
@@ -251,6 +252,7 @@ strong {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  gap: 15px;
 }
 .external-links a {
   color: var(--color-neutral);

@@ -40,11 +40,11 @@ export default async function PortfolioItem({ params }) {
 
   return (
     <>
-      <div className="main">
+      {/* <div className="main">
         <Link href="/portfolio" className="button-main">
           Back to Portfolio
         </Link>
-      </div>
+      </div> */}
 
       <main className="story-block-main">
         <section className="story-block-header">

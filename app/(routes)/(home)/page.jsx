@@ -41,7 +41,7 @@ export default async function Home() {
 
   return (
     <>
-      <main className="main_no_padding" >
+      <main className="main_no_padding">
         <header className={styles.header}>
           <div className={styles.about}>
             <img src="/assets/logo_alt.svg" alt="" className="logo" />
